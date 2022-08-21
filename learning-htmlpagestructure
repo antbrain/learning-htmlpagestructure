@@ -1,0 +1,212 @@
+# Quick Guide to HTML Page Structure Bliss
+
+Paste code snippets into code editor of choice. 
+
+#### Contents
+
+1. [HTML Layout Elements](#html-layout-elements)
+2. [HTML Text Elements](#html-text-elements)
+3. [Lists](#lists)
+
+## HTML Layout Elements
+
+```
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Genetically Modified Human</title>
+  </head>
+  <body>
+    <p>I am the future.</p>
+  </body>
+</html
+```
+
+An HTML document is made up of the following elements:
+
+- **```<!DOCTYPE html>```** : Needed to allow for functionality of a website. A *document type declaration* that lets the browser know what type of HTML you're using (HTML5 as of writing in 2022).
+- **```<html></html>```** : Wraps all content on page. Sometimes known as "root element". It tells the browser that everything between opening and closing tags is an HTML document.
+- **```<head></head>```** : Container for HTML metadata, not visible to website visitors. Should only be used once. Should be the first element inside an HTML element after the opening html tag and end directly before the opening body tag.. Title elements are required.
+
+##### Applying CSS and JS to HTML
+
+```<link>``` : links HTML file to CSS stylesheet
+
+```
+<link rel="stylesheet" href="ant-brain-design-css.css">
+```
+
+and 
+
+```<script>``` : instructs the browser to load the JavaScript after the page has finished parsing HTML. The HTML is all loaded before the JS runs.
+
+```
+<script src="ant-brain-js-file.js" defer></script>
+```
+
+1. Save all files in a shared directory
+2. Open HTML file in text editor 
+3. Add link and script elements to HTML code
+
+##### Setting Primary Language of the HTML Document
+
+```
+<html lang="en-US">
+```
+
+
+- **```<meta charset="utf-8">```** : Sets the character set to UTF-8, which includes characters from a majority of human written languages (can also use ```<meta author / content / property / name>``` for other metadata types)
+
+##### Meta Tag: Name & Content Attributes
+
+```
+<meta name="insect" content="An Ant">
+<meta name="description" content="This ant is very smart and has a nice smile.">
+```
+
+##### Meta Tag: Adding a Favicon
+
+```
+<!-- third-generation iPad with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://antbrainforever.com/static/img/favicon144.png">
+<!-- iPhone with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://antbrainforever.com/static/img/favicon114.png">
+<!-- first- and second-generation iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://antbrainforever.com/static/img/favicon72.png">
+<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<link rel="apple-touch-icon-precomposed" href="https://antbrainforever.com/static/img/favicon57.png">
+<!-- basic favicon -->
+<link rel="icon" href="https://antbrainforever.com/static/img/favicon32.png">
+```
+
+- **```<title></title>```** : Sets title of page that appears in browser tab when page is loaded / bookmarked.
+- **```<body></body>```** : Contains all content on page, including text, images, videos, games, playable, audio, etc.
+
+
+### Semantic Elements
+
+- **```<article>```** : Defines independent, self-contained content
+- **```<aside>```** : Defines content aside from the page content
+- **```<details>```** : Defines additional details that the user can view or hide
+- **```<figcaption>```** : Defines a caption for a ```<figure>``` element
+- **```<figure>```** : Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+- **```<footer>```** : Defines a footer for a document or section
+- **```<header>```** : Specifies a header for a document or section
+- **```<main>```**: Specifies the main content of a document
+- **```<mark>```**: Defines marked/highlighted text
+- **```<nav>```** : Defines navigation links
+- **```<section>```** : Defines a section in a document
+- **```<summary>```** : Defines a visible heading for a ```<details>``` element
+- **```<time>```** : Defines a date/time
+
+## HTML Text Elements
+
+### Links 
+
+##### Same Directory Hyperlinks
+
+```
+<p>Want to buy an alien?
+Find details on my <a href="alien-sales.html">Alien Sales Page</a>.</p>
+```
+
+##### Subdirectory Hyperlinks
+
+```
+<p>Visit my <a href="alien-projects/index.html">Alien Projects homepage</a>.</p>
+```
+
+##### Parent Directory Hyperlinks
+
+```
+<p>A link to my <a href="../alien-bodies/alien-skin-list.pdf">alien skin</a>.</p>
+```
+
+##### Document Fragment Links
+
+```
+<h2 id="New_Products">New Products</h2>
+```
+
+```
+<p>Want to see some new stuff? Use my <a href="products.html#New_Products">New Products</a>.</p>
+```
+
+##### Email Links
+
+```
+<a href="mailto:coolemail69@antbrainforever.com">Send email to millions of ants</a>
+```
+
+```
+<a href="mailto:coolemail69@antbrainforever.com?cc=internet@antbrainforever.com&bcc=commerce@antbrainforever.comm&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
+  Send mail with cc, bcc, subject and body
+</a>
+```
+
+## Lists
+
+##### Bulleted List (Unordered)
+
+``` 
+<ul>
+    <li>Ants</li>
+     <li>Brains</li>
+    <li>Art</li>
+ </ul> 
+```
+
+##### Bulleted List (Ordered)
+
+``` 
+<ol>
+    <li>Create</li>
+     <li>Cry</li>
+    <li>Repeat</li>
+ </ol> 
+```
+
+##### Nest List (Ordered & Unordered)
+
+```
+<ol>
+    <li>Skincare</li>
+        <ul>
+            <li>Actives
+                <ul>
+                    <li>Vitamin C</li>
+                    <li>Retinol</li>
+                    <li>Lactic Acid</li>
+                    <li>Glycolic Acid</li>
+                </ul>
+            <li>Non-Actives</li>
+                <ul>
+                    <li>Aloe</li>
+                    <li>Shea Butter</li>
+                    <li>Glycerin</li>
+                </ul>
+        </ul>
+    <li>Makeup</li>
+        <ul>
+           <li>Face Makeup
+                <ul>
+                    <li>Foundation</li>
+                    <li>Concealer</li>
+                    <li>Blush</li>
+                    <li>Highlighter</li>
+                </ul>
+        </ul>
+        <ul>
+           <li>Eye / Lip Makeup
+                <ul>
+                    <li>Eyeliner</li>
+                    <li>Eyeshadow</li>
+                    <li>Lipstick</li>
+                    <li>Lipgloss</li>
+                </ul>
+        </ul>
+</ol>
+```
+
+
